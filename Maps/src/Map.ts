@@ -1,5 +1,9 @@
-import { Company } from './Company';
-import { User } from './User';
+interface Mappable {
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
 
 export class Map {
   googleMap: google.maps.Map;
@@ -14,7 +18,7 @@ export class Map {
     });
   }
 
-  addMappableMarker(mappable: User | Company): void {
+  addMappableMarker(mappable: Mappable): void {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
@@ -23,14 +27,4 @@ export class Map {
       },
     });
   }
-
-  // addCompanyMarker(company: Company): void {
-  //   new google.maps.Marker({
-  //     map: this.googleMap,
-  //     position: {
-  //       lat: company.location.lat,
-  //       lng: company.location.lng,
-  //     },
-  //   });
-  // }
 }
