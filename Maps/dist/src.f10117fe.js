@@ -123075,7 +123075,7 @@ function () {
   }
 
   User.prototype.markerContent = function () {
-    return "<h1> " + this.name + "</h1>";
+    return "<h1>" + this.name + "</h1>";
   };
 
   return User;
@@ -123111,7 +123111,7 @@ function () {
   }
 
   Company.prototype.markerContent = function () {
-    return "\n    <div>\n    <h1> " + this.comapnayName + "</h1>\n             <h3>" + this.catchPhrase + "</h3>\n             </div>";
+    return "\n      <div>\n         <h1> " + this.comapnayName + "</h1>\n         <h3>" + this.catchPhrase + "</h3>\n      </div>";
   };
 
   return Company;
@@ -123207,7 +123207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

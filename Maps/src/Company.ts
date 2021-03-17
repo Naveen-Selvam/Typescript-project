@@ -6,6 +6,13 @@ export class Company {
     lat: number;
     lng: number;
   };
+  markerContent(): string {
+    return `
+      <div>
+         <h1> ${this.comapnayName}</h1>
+         <h3>${this.catchPhrase}</h3>
+      </div>`;
+  }
 
   constructor() {
     this.comapnayName = faker.company.companyName();
@@ -14,13 +21,5 @@ export class Company {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude()),
     };
-  }
-
-  markerContent(): string {
-    return `
-    <div>
-    <h1> ${this.comapnayName}</h1>
-             <h3>${this.catchPhrase}</h3>
-             </div>`;
   }
 }
